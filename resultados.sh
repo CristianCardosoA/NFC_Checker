@@ -1,7 +1,6 @@
 #!/bin/bash
 UUID=""
 CLASE=$1
-TERM=ansi whiptail --title "UNAM FCA RESULTADOS" --infobox "Clase UNAM - $CLASE" 8 78
 
 for(( ; ; ))do
         echo "Esperando conexion ..."
