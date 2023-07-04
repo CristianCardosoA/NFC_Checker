@@ -1,5 +1,11 @@
 #!/bin/bash
 UUID=""
+
+CLASS=$(whiptail --title "Choose Only One Package" --radiolist \
+"List of packages" 20 100 10 \
+"oo" "Analisis y diseno O.O." OFF \
+"apple" "Swift Apple" OFF 3>&1 1>&2 2>&3)
+
 for(( ; ; ))do
 
 	NAME=$(whiptail --title "Nombre" --inputbox "Nombre" 8 40 3>&1 1>&2 2>&3)
@@ -11,7 +17,7 @@ for(( ; ; ))do
 	TERM=ansi whiptail --title "UNAM FCA CONFIG NFC" --infobox "NOMBRE: $NAME $LASTNAME \nEMAIL: $EMAIL \nNFC TAG: $UUID" 20 78
 	whiptail --title "CONFIRMACION" --yesno "Should I proceed" 8 78 
 	if [[ $? -eq 0 ]]; then 
-		echo "$NAME,$LASTNAME,$EMAIL,$UUID" >> alumnos.csv
+		echo "$UUID,$NAME,$LASTNAME,$EMAIL,$CLASS" >> alumnos.csv
   		whiptail --title "MESSAGE" --msgbox "Completado" 8 78 
 	elif [[ $? -eq 1 ]]; then 
   		whiptail --title "MESSAGE" --msgbox "Cancelado ...<NO>." 8 78 
