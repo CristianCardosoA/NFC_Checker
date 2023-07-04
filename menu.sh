@@ -1,6 +1,6 @@
 #!/bin/bash
 
-OPTION=$(whiptail --title "L.I Cristian Cardoso UNAM-FCA" --menu "Selecciona una opcion" 30 78 10 \
+OPTION=$(whiptail --title "L.I Cristian Cardoso UNAM-FCA" --menu "Selecciona una opcion" 20 78 10 \
 "1" "Asistencia O.O" \
 "2" "Participacion O.O" \
 "3" "Asistencia APPLE" \
