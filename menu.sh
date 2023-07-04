@@ -6,8 +6,9 @@ OPTION=$(whiptail --title "L.I Cristian Cardoso UNAM-FCA" --menu "Selecciona una
 "3" "Asistencia APPLE" \
 "4" "Participacion APPLE" \
 "5" "Configuracion" \
-"6" "Resultados" \
-"7" "Resultados exportar" 3>&1 1>&2 2>&3)
+"6" "Guardar y enviar " \
+"7" "Resultados" \
+"8" "Resultados exportar" 3>&1 1>&2 2>&3)
 
 case $OPTION in
   1)
@@ -21,8 +22,10 @@ case $OPTION in
   5)
     ./config.sh;;
   6)
-    ./resultados.sh;;
+    ./save.sh;;
   7)
+    ./resultados.sh;;
+  8)
     ./resultados_export.sh;;
   *)
     echo "Exit ..."
